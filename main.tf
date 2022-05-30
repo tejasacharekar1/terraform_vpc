@@ -8,7 +8,7 @@ locals {
 }
 
 resource "aws_vpc" "vpc-test" {
-    cidr_block = var.vpcCidr
+    cidr_block = "192.168.1.0/24"
 
     tags = {
       "Name" = "${local.name_env}-vpc-test"
@@ -17,7 +17,7 @@ resource "aws_vpc" "vpc-test" {
 }
 
 resource "aws_vpc" "vpc-test2" {
-    cidr_block = var.vpc2
+    cidr_block = "192.168.2.0/24"
 
     tags = {
       "Name" = "${local.name_env}-vpc-test2"
